@@ -29,7 +29,6 @@ end
 
 # Package
 default['prosody']['package'] = "prosody"
-default['prosody']['luasec_package'] = 'lua-sec-prosody'
 
 default['prosody']['luasec_package'] = value_for_platform(
   'ubuntu' => { ['14.04', '14.10'] => 'lua-sec' },
