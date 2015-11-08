@@ -33,6 +33,7 @@ default['prosody']['luasec_package'] = 'lua-sec-prosody'
 
 default['prosody']['luasec_package'] = value_for_platform(
   'ubuntu' => { ['14.04', '14.10'] => 'lua-sec' },
+  'debian' => { ['8.0'] => 'lua-sec' },
   'default' => 'lua-sec-prosody'
 )
 
@@ -43,7 +44,7 @@ default['prosody']['libevent_package'] = value_for_platform(
 )
 
 # Source
-default['prosody']['version'] = '0.9.1'
+default['prosody']['version'] = '0.10'
 case node['platform_family']
 when 'debian'
   source_packages = %w(  lua5.1 liblua5.1-dev libssl-dev libidn11-dev lua-filesystem lua-expat lua-dbi-mysql  )
